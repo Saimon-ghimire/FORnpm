@@ -1,0 +1,56 @@
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <button class="hide" type="button">Hide</button><br>
+    <button class="show" type="button">show</button>
+    <div id="printer">
+    <p class="par">This is the paragraph to be played with</p>
+    </div>
+
+    <!-- Jquery part -->
+    <script>
+        $(document).ready(function (){
+            $(".hide").click(function(){
+                $("p.par").hide();
+                document.getElementById('printer').innerHTML="Ti's hidden. This is another text"
+
+            })
+            $(".show").click(function(){
+                $("p.par").show();
+            });
+        });
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

@@ -1,0 +1,32 @@
+<html>
+
+<body>
+    <div class="ageGroup">
+        <h2>Check the age group of a person</h2>
+        <input type="number" placeholder="Enter the age here" id="age" name='age'>
+        <button onclick="checker()">Check</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function checker() {
+            var age = parseInt(document.getElementById('age').value);
+
+            if (age < 13)
+                document.getElementById('output').innerHTML = "Child"
+            else if (age < 20)
+                document.getElementById('output').innerHTML = "Teen"
+            else if (age < 35)
+                document.getElementById('output').innerHTML = "Young"
+            else if (age < 50)
+                document.getElementById('output').innerHTML = "Adult"
+            else
+                // window.print()
+                document.getElementById('output').innerHTML = "Old"
+        }
+
+
+    </script>
+</body>
+
+</html>

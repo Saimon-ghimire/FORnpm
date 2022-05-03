@@ -1,0 +1,108 @@
+body{
+    background-color: rgb(234, 240, 240);
+    margin:0;
+}
+
+/*styling header*/
+.header{
+    background-color: #232020;
+    padding: 26px
+}
+
+/*styling navbar*/
+ul{
+    background-color: rgb(73, 64, 64);
+    list-style-type:none; /*to remove bullet from unordered list*/
+    margin:0;
+    padding: 15px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    color:white;
+    text-decoration: none; /*to remove underline from hyperlinked text*/
+    margin:5px;
+    margin-left:50px;
+    font-size: 20px;
+}
+ul li a:hover{
+    color:rgb(88, 224, 88);
+    text-transform: uppercase;
+}
+
+/*styling image*/
+.image img{
+    width:90%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro{
+    background-color: #ec9e39;
+    width: 80%;
+    margin-left: 122px;
+    padding: 7px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.footer{
+    background-color: rgb(73, 73, 73);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: whitesmoke;
+    display:flex;
+    line-height: 25px;
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+.footer-1 a{
+    display: block;
+    text-decoration: none;
+    color: rgb(225, 225, 225)
+}
+.footer-1 a:hover{
+    text-decoration: underline;
+    color: #6091ba;
+}
+.footer-2{
+    padding-left: 50px
+}
+.footer-2 a{
+    display: block;
+    text-decoration: none;
+    color: rgb(225, 225, 225)
+}
+.footer-2 a:hover{
+    text-decoration: underline;
+    color: #6091ba;
+}
+.footer-3 img{
+    width:260px;
+    margin-top: 30px;
+    padding-left: 70px;
+}
+.footer-4{
+    padding-left: 75px;
+}
+.footer-4 pre{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin-left: -50px;
+}
+.footer-5{
+    display: flex;
+    background-color: rgb(53,50,50);
+    color: whitesmoke;
+    padding: 15px;
+    padding-left: 50px;
+}
+.socialMedia{
+    margin-left: 73%;
+    word-spacing: 15px;
+}
+.fab{
+    color: rgb(168,163,163);
+}

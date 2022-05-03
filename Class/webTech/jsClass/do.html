@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="a" placeholder="Number 1">
+    <input type="number" id="b" placeholder="Number 2"><br>
+    
+    <button onclick="console.log(add())">Add</button>
+    <div id="output"></div>
+    <!-- <button onclick="divide()">divide</button>
+    <button onclick="multiply()">multiply</button> -->
+    <script type="text/javascript">
+        num1=parseInt(document.getElementById('a').value);
+        num2=parseInt(document.getElementById('b').value);
+        function add(){
+            return num1+num2;
+
+        }
+        // function divide(){
+        //     document.getElementById('output').innerHTML=num1/num2;
+
+        // }
+        // function multiply(){
+        //     document.getElementById('output').innerHTML=num1*num2;
+
+        // }
+    </script>
+
+</body>
+</html>

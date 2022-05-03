@@ -1,0 +1,17 @@
+								 SURFACE TENSION
+
+
+mathematically the surface tension is defined as stretching force per unit length on either side of imaginary line 
+
+types of force: 1)cohesive 2)adhesive
+cohesive force: the force of attraction ebtn the molecules of ame substance. example: force of attratin betn molecules of water
+adhesive force: the force of attraction betn the molecules of two different substance is called adhesive force. example: the force of attraction betn the 
+molecules of water and molecules of glass storing the water
+
+interemolecular range: the maximum distance upto which one molecule can attract another molecule is known as molecular range. the moleculat range is 
+abt 10^-9 m in solids and liquids
+
+sphere of influence: a sphere drawn around the molecule as a center and with radius equal to the molecular range is called sphere of influence
+
+surface film: the thinnest film of a liquid near its surface having thickness equal to the molecular range is called surface film
+

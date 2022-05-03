@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+</head>
+
+<form id="validatingForm" method="post">
+    Username: <input type="text" id="uname" name="uname"><br>
+    Password:<input type="password" id="pass" name="pass"><br>
+    <input type="submit" value="Submit">
+</form>
+<script>
+    $(document).ready(function () {
+        $('#validatingForm').validate({
+            rules: {
+                uname: 'required',
+                pass: { required: true, minlength: 8 }
+            },
+            messages: {
+                uname: 'This field is required',
+                pass: {
+                    required: 'This field is required',
+                    minlength: 'Password must be 8 characters or long'
+                }
+            },
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+    });
+</script>
+
+</body></html>

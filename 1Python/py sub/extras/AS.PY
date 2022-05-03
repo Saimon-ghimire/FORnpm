@@ -1,0 +1,11 @@
+one=input ("a name: ")
+two=input ("another name: ")
+three=input ("which character to pull: ")
+print ("the word is ",one+two)
+four=len (one+two)
+print ("the length of total string is: ",four)
+five =one+two
+six=five[three]
+print ("the character you pulled is: ", six)
+
+HELL=input("finished")

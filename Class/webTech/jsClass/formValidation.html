@@ -1,0 +1,17 @@
+<form onsubmit="validate()" name="f1" method="post">
+    Enter password: <input type="password" name="pwd1" placeholder="password">
+    Re-enter password: <input type="password" name="pwd2" placeholder="password">
+    <input type="submit" value="Click">
+</form>
+<script>
+    function validate(){
+        var pwd1=document.f1.pwd1.value
+        if (pwd1.length < 8){
+            window.alert('Password length too small')
+        }
+        var pwd2=document.f1.pwd2.value
+        if (pwd1!=pwd2){
+            window.alert('Passwords do not match!')
+        }
+    }
+</script>

@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[a4paper,margin=2cm,headsep=.1cm,headheight=18pt,top=3cm,footnotesep=1.5\baselineskip]{geometry}
+\usepackage{caption}
+\captionsetup[figure]{labelfont=bf,labelsep=newline,justification=centerlast,labelfont={small,sc,bf},font=small,aboveskip=.0\baselineskip}
+
+
+
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\setcounter{secnumdepth}{5}
+ 
+\titleformat{\section}[hang]{\NormalBaseline\filright\large\bfseries}
+{\large\thesection}
+{10pt}
+{}
+[]
+\titleformat{\subsection}[hang]{\NormalBaseline\filright\bfseries}
+{\thesubsection}
+{10pt}
+{}
+[]
+\titleformat{\subsubsection}[hang]{\NormalBaseline\filright\bfseries\itshape}
+{\upshape\thesubsubsection}
+{10pt}
+{}
+[]
+\titleformat{\paragraph}[runin]{\NormalBaseline\filright\bfseries}
+{\theparagraph}
+{10pt}
+{}
+[]
+\titleformat{\subparagraph}[runin]{\NormalBaseline\filright\bfseries\itshape}
+{\thesubparagraph}
+{10pt}
+{}
+[]
+
+\titlespacing{\section}{0pt}{1.5\baselineskip}{.2\baselineskip}  
+\titlespacing{\subsection}{0pt}{1.5\baselineskip}{.2\baselineskip}  
+\titlespacing{\subsubsection}{0pt}{1.5\baselineskip}{.2\baselineskip}  
+\titlespacing{\paragraph}{0pt}{.5\baselineskip}{10pt}  
+\titlespacing{\subparagraph}{0pt}{.5\baselineskip}{10pt}  
+
+\begin{document}
+\section*{\textbf{Problem:}A 96 inch metallic bar was used to make a rectangular frame. Find the dimension of the rectangular metallic frame with maximum area.}
+    
+\section{Objective :}
+ To find the dimensions and maximum area of the given metallic frame.
+    
+\section{Procedure/ Explanation :}
+\hspace{1em}Let $x$ and $y$ be the length and breadth of the metallic frame respectively.
+
+Now,
+
+Perimeter of metallic frame = 96 inch
+
+
+$2(x+y)=96 \\ or,$   $x+y=48 \\ or,$   $y=48-x$
+
+Then,
+
+
+Area of metallic frame = $x*y$
+
+\hspace{10em}= $x(48-x)$
+
+\hspace{10em}= $48x-x^2$
+
+           
+Let,
+
+
+$A(x)=48x-x^2$
+
+
+$A'(x)=48-2x$
+
+
+$A''(x)=-2$\\
+
+
+At stationary point of a differentiable function,
+
+
+y=48-x
+ =48-24
+Y=24
+When x=24,
+
+A''(x)=A''(24)=-2 {\textless}0 . So A(x) has maximum area at x=24.
+
+For maximum area,
+
+A(x)=A(24)= 48*24 - 24{\textasciicircum}2=576
+    
+\section{Observation:}
+It is observed that a 96 inch metallic bar can form a rectangular metallic frame of dimension 24 inch x 24 inch and can enclose a maximum area of 576 sq. inch.
+    
+\section{Conclusion:}
+HIghest values of the dimensions can give maximum area. Since area is expressed in two dimensions, maximum values of these dimensions can be obtained by dividing the perimeter equally. Thus, it is concluded that the dimensions that are \ensuremath{\frac12}  of the perimeter will provide maximum area.
+    
+\end{document}

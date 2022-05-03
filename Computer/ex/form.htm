@@ -1,0 +1,114 @@
+<html>
+<head>
+	<title>form.html</title>
+</head>
+<body BGCOLOR="#57e7e2">
+    <table cellpadding="5" align="center" border="1"  width=49.2%>
+	<td > 
+		<table >
+            <center><h1>Student Registration Form</h1></center>
+        </table>
+    </td>
+    </table>
+
+	<table align="center">
+	<tr>
+	<td>
+	<form method="get" action="registred.htm">
+		<table cellpadding="10">
+			<tr>
+				<td>Name:</td>
+				<td><input size="30"required type="text" name="name" maxlength="20" placeholder="Enter full name"></td>
+			</tr>
+			<tr>
+				<td>Father's Name:</td>
+				<td><input size="30" required type="text"  name="Father's name" maxlength="20" ></td>
+			</tr>
+            <tr>
+				<td>Mother's Name:</td>
+				<td><input size="30" required type="text"  name="Mother's name" maxlength="20" ></td>
+			</tr>
+            <tr>
+				<td>Phone number:</td>
+				<td><input size="30" required type="number"  name="Phone Number" placeholder="+977 xxxxxxxxxx" minlength="10" maxlength="14" ></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input size="30" required type="email" name="email" placeholder="sample@example.com"></td>
+			</tr>
+			<tr>
+				<td>Gender:</td>
+				<td>
+					<input type="radio" name="gender" value="male">Male
+					<input type="radio" name="gender" value="female">Female
+					<input type="radio" name="gender" value="other">Other
+				</td>
+			</tr>
+			<tr>
+				<td>Date of Birth</td>
+				<td>
+                    <input size="2" type="number" placeholder="Day" name="Day" > -
+                    <input size="2" type="number" placeholder="Month" name="Month"> -
+                    <input size="2" type="number" placeholder="Year" name="Year"><i>(dd-mm-yyyy)</i>
+                </td>
+			</tr>
+			<tr>
+                <td>Address:</td>
+				<td><input size="40"required type="text" name="Address" maxlength="100" placeholder="Street-  House-  Road-"></td>
+			</tr>
+
+            <tr>
+				<td>Blood group</td>
+				<td placeholder="select">
+					<select>
+						<option>A+</option>
+						<option>A-</option>
+						<option>B+</option>
+						<option>B-</option>
+						<option>AB+</options>
+                        <option>AB-</options>
+                        <option>O+</options>
+                        <option>O-</options>
+					</select>
+				</td>
+			</tr>
+            <tr>
+				<td>Department:</td>
+				<td>
+					<input type="radio" name="CSE" value="CSE">CSE
+					<input type="radio" name="EEE" value="EEE">EEE
+					<input type="radio" name="EEA" value="EEA">EEA
+				</td>
+			</tr>
+            <tr>
+				<td>Course:</td>
+				<td>
+					<input type="radio" name="C" value="C">C
+					<input type="radio" name="C++" value="C++">C++
+					<input type="radio" name="Java" value="Java">Java
+                    <input type="radio" name="AI" value="AI">AI
+                    <input type="radio" name="Machine Learning" value="Machine Learning">Machine Learning
+                    <input type="radio" name="Robotics" value="Robotics">Robotics
+				</td>
+			</tr>
+            <tr>
+				<td>Photo:</td>
+				<td> <input type="file" name="photo" value="photo" > </td>
+			</tr>
+            <br>
+			<tr>
+				<td > 
+					<input type="submit" value="Submit">
+					<input type="reset" value="Reset">
+				</td>
+			</tr><br>           
+		</table>
+		&nbsp; &nbsp;Click to go to:
+		<a href="home.htm" style="color: #083537" target="_blank">home.html</a>  
+		<a href="list.htm" style="color: #083537" target="_blank">list.html</a></td></tr>
+	</form>
+	</td>
+	</tr>
+	</table>
+</body>
+</html>

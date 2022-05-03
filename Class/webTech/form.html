@@ -1,0 +1,47 @@
+<html>
+    <head><title>Form</title></head>
+    <body>
+        <h1>Welcome to GIHE</h1><br>
+        <p>Please fill out following details to pre-registr yourself</p>
+               
+        <form>
+            <fieldset style="width: 30%;">
+                <legend>Details</legend>
+                <label for='Name'>
+                    Name:<br>
+                    <input id='Name' type="text" placeholder="Enter your name">
+                </label><br>
+                <label for='Address'>
+                    Address:<br>
+                    <input id="Address" type="text" placeholder="Enter your address">
+                </label><br>
+                <label for="Stream">
+                    Stream:<br>
+                    <select>
+                        <optgroup label='A levels'>
+                            <option value='A_Sc'>Science</option>
+                            <option value='A_Mgmt'>Management</option>
+                        </optgroup>
+                        <optgroup label="NEB">
+                            <option value='N_Sc'>Science</option>
+                            <option value='N_MGMT'>Management</option>
+                        </optgroup>                       
+                    </select>
+                </label><br>
+                <label for='DOB'>
+                    Date of Birth:<br>
+                    <input type="date" id='DOB'>
+                </label><br>
+                <label for='Gender'>
+                    Gender:<br>
+                    <input type="radio" name='gender'>Male<br>
+                    <input type="radio" name='gender'>Female<br>
+                    <input type="radio" name='gender'>Other<br>
+                </label>
+                <input type="submit" value="Register" onclick="alert('Thankyou :)')">
+                <input type='reset' value='Cancel'>
+                
+            </fieldset>
+        </form>
+    </body>
+</html>

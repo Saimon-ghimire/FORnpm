@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <!--link formstyle.css with this page-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formstyle.css">
+    <!--fontawesome link kit-->
+    <script src="https://kit.fontawesome.com/0169e518f5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="images/logo1.PNG" alt="gems college" style="margin-left:50px;">
+        <!--alt attribute displays alternative text when your image is not loaded-->
+        <img src="images/logo2.PNG" alt="gihe" style="float:right;margin-right:40px;">
+    </div>
+    <!--navbar-->
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Academics</a></li>
+        <li><a href="#">Clubs and ECA</a></li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="register.html">Registration</a></li>
+        <li><a href="#">Online Result</a></li>
+    </ul>
+    <!--end of header part-->
+
+    <!--registration form-->
+    <h1>Fill in the survey form</h1>
+    <form>
+        <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+        </div>
+        <div class="form-control">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter your email id">
+        </div>
+        <div class="form-control">
+            <label>Age</label>
+            <input type="text" name="age" placeholder="Enter your age">
+        </div>
+        <div class="form-control">
+            <label>Who are you?</label>
+            <!--dropdown-->
+            <select name="role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <!--radiobutton-->
+        <div class="test">
+            <label>Would you recommed Computer Training to a friend?</label>
+            <div class="tests">
+                <input type="radio" name="recomend">Yes</input>
+                <input type="radio" name="recomend">No</input>
+                <input type="radio" name="recomend">Maybe</input>
+            </div>
+        </div>
+        <!--checkbox-->
+        <div class="form-control">
+            <label>Languages and Frameworks known (Check all that apply)</label>
+            <label><input type="checkbox" name="lang">C</input></label>
+            <label><input type="checkbox" name="lang">C#</input></label>
+            <label> <input type="checkbox" name="lang">Java</input></label>
+            <label><input type="checkbox" name="lang">Python</input></label>
+        </div>
+        <!--textarea-->
+        <div class="form-control">
+            <label>Any comments or suggestions</label>
+            <textarea rows=5 cols=40 name="comment" placeholder="Enter your comment"></textarea>
+        </div>
+        <!--submit button-->
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+    <!--footerpart begins-->
+    <div class="footer">
+        <div class="footer-1">
+            <!--include About-->
+            <h1>About</h1>
+            <a href="#">Founder Chairman's Message</a>
+            <a href="#">Founder Chairman's Message</a>
+            <a href="#">Founder Chairman's Message</a>
+            <a href="#">Founder Chairman's Message</a>
+            <a href="#">Founder Chairman's Message</a>
+        </div>
+        <div class="footer-2">
+            <!--Links-->
+            <h1>Links</h1>
+            <a href="#">CAIE A Level</a>
+            <a href="#">CAIE A Level</a>
+            <a href="#">CAIE A Level</a>
+            <a href="#">CAIE A Level</a>
+        </div>
+        <div class="footer-3">
+            <!-- insert image-->
+            <img src="images/duke.png" alt="duke award">
+        </div>
+        <div class="footer-4">
+            <!--Contact Us-->
+            <h1>Contact Us</h1>
+            <pre>
+GEMS Institute of Higher Education
+Dhapakhel, Lalitpur
+P.O. Box: 1794 Kathmandu
+Nepal
+
+977 01 5275112977 
+01 5275121
+info@gihe.edu.np
+</pre>
+        </div>
+    </div>
+    <!--end footer-->
+    <div class="footer-end">
+        Copyright &copy: Gems College
+        <div class="social-media">
+            <a href="https://www.facebook.com/gihenepal/"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

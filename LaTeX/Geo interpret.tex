@@ -1,0 +1,492 @@
+\documentclass[11pt]{article}
+\makeatletter\if@twocolumn\PassOptionsToPackage{switch}{lineno}\else\fi\makeatother
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\graphicspath{ {/home/saimon7259/Desktop/} }
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{amsfonts,amssymb,amsbsy,latexsym,amsmath,tabulary,graphicx,times,xcolor}
+\usepackage[utf8x]{inputenc}
+\usepackage{fancyhdr}
+\def\NormalBaseline{\def\baselinestretch{1.1}}
+\makeatletter
+\def\hlinewd#1{%
+  \noalign{\ifnum0=`}\fi\hrule \@height #1%
+  \futurelet\reserved@a\@xhline}
+\def\tbltoprule{\hlinewd{.8pt}}%\\[-10pt]}
+\def\tblbottomrule{\hlinewd{.8pt}}
+\def\tblmidrule{\hline\noalign{\vspace*{0pt}}}
+
+\def\@shorttitle{\@empty}
+\def\shorttitle#1{\gdef\@shorttitle{#1}}
+
+\fancypagestyle{custom}{
+\fancyhf{}
+\fancyhead[C]{\@shorttitle}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+}
+\fancypagestyle{plain}{
+\fancyhf{}
+}
+
+
+\makeatother
+
+\usepackage{times}
+
+\usepackage[a4paper,margin=2cm,headsep=.8cm,headheight=18pt,top=2.5cm,footnotesep=1.5\baselineskip]{geometry}
+\usepackage{caption}
+\captionsetup[figure]{labelfont=bf,labelsep=newline,justification=centerlast,labelfont={small,sc,bf},font=small,aboveskip=.0\baselineskip}
+
+\captionsetup[table]{labelfont=bf,labelsep=newline,justification=centerlast,labelfont={small,sc,bf},font=small,aboveskip=.3\baselineskip}
+\linespread{1.5}
+
+\setcounter{totalnumber}{4}
+\def\topfraction{0.9}
+\def\bottomfraction{0.4}
+\def\floatpagefraction{0.8}
+\def\textfraction{0.1}
+\widowpenalty 10000
+\clubpenalty 10000
+\makeatletter
+\setlength\intextsep   {1.5\baselineskip \@plus 2\p@ \@minus 2\p@}
+\makeatother
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Following additional macros are required to function some 
+% functions which are not available in the class used.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{url,multirow,morefloats,floatflt,cancel}
+\makeatletter
+
+
+\AtBeginDocument{\@ifpackageloaded{textcomp}{}{\usepackage{textcomp}}}
+\makeatother
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage[nointegrals]{wasysym}
+\urlstyle{rm}
+\makeatletter
+
+%%%For Table column width calculation.
+\def\mcWidth#1{\csname TY@F#1\endcsname+\tabcolsep}
+
+%%Hacking center and right align for table
+\def\cAlignHack{\rightskip\@flushglue\leftskip\@flushglue\parindent\z@\parfillskip\z@skip}
+\def\rAlignHack{\rightskip\z@skip\leftskip\@flushglue \parindent\z@\parfillskip\z@skip}
+
+%Etal definition in references
+\@ifundefined{etal}{\def\etal{\textit{et~al}}}{}
+
+
+%\if@twocolumn\usepackage{dblfloatfix}\fi
+\usepackage{ifxetex}
+\ifxetex\else\if@twocolumn\@ifpackageloaded{stfloats}{}{\usepackage{dblfloatfix}}\fi\fi
+
+\AtBeginDocument{
+\expandafter\ifx\csname eqalign\endcsname\relax
+\def\eqalign#1{\null\vcenter{\def\\{\cr}\openup\jot\m@th
+  \ialign{\strut$\displaystyle{##}$\hfil&$\displaystyle{{}##}$\hfil
+      \crcr#1\crcr}}\,}
+\fi
+}
+
+%For fixing hardfail when unicode letters appear inside table with endfloat
+\AtBeginDocument{%
+  \@ifpackageloaded{endfloat}%
+   {\renewcommand\efloat@iwrite[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}}{\newif\ifefloat@tables}%
+}%
+
+\def\BreakURLText#1{\@tfor\brk@tempa:=#1\do{\brk@tempa\hskip0pt}}
+\let\lt=<
+\let\gt=>
+\def\processVert{\ifmmode|\else\textbar\fi}
+\let\processvert\processVert
+
+\@ifundefined{subparagraph}{
+\def\subparagraph{\@startsection{paragraph}{5}{2\parindent}{0ex plus 0.1ex minus 0.1ex}%
+{0ex}{\normalfont\small\itshape}}%
+}{}
+
+% These are now gobbled, so won't appear in the PDF.
+\newcommand\role[1]{\unskip}
+\newcommand\aucollab[1]{\unskip}
+  
+\@ifundefined{tsGraphicsScaleX}{\gdef\tsGraphicsScaleX{1}}{}
+\@ifundefined{tsGraphicsScaleY}{\gdef\tsGraphicsScaleY{.9}}{}
+% To automatically resize figures to fit inside the text area
+\def\checkGraphicsWidth{\ifdim\Gin@nat@width>\linewidth
+	\tsGraphicsScaleX\linewidth\else\Gin@nat@width\fi}
+
+\def\checkGraphicsHeight{\ifdim\Gin@nat@height>.9\textheight
+	\tsGraphicsScaleY\textheight\else\Gin@nat@height\fi}
+
+\def\fixFloatSize#1{}%\@ifundefined{processdelayedfloats}{\setbox0=\hbox{\includegraphics{#1}}\ifnum\wd0<\columnwidth\relax\renewenvironment{figure*}{\begin{figure}}{\end{figure}}\fi}{}}
+\let\ts@includegraphics\includegraphics
+
+\def\inlinegraphic[#1]#2{{\edef\@tempa{#1}\edef\baseline@shift{\ifx\@tempa\@empty0\else#1\fi}\edef\tempZ{\the\numexpr(\numexpr(\baseline@shift*\f@size/100))}\protect\raisebox{\tempZ pt}{\ts@includegraphics{#2}}}}
+
+%\renewcommand{\includegraphics}[1]{\ts@includegraphics[width=\checkGraphicsWidth]{#1}}
+\AtBeginDocument{\def\includegraphics{\@ifnextchar[{\ts@includegraphics}{\ts@includegraphics[width=\checkGraphicsWidth,height=\checkGraphicsHeight,keepaspectratio]}}}
+
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\def\URL#1#2{\@ifundefined{href}{#2}{\href{#1}{#2}}}
+
+%%For url break
+\def\UrlOrds{\do\*\do\-\do\~\do\'\do\"\do\-}%
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+
+
+
+\edef\fntEncoding{\f@encoding}
+\def\EUoneEnc{EU1}
+\makeatother
+\def\floatpagefraction{0.8} 
+\def\dblfloatpagefraction{0.8}
+\def\style#1#2{#2}
+\def\xxxguillemotleft{\fontencoding{T1}\selectfont\guillemotleft}
+\def\xxxguillemotright{\fontencoding{T1}\selectfont\guillemotright}
+
+\newif\ifmultipleabstract\multipleabstractfalse%
+\newenvironment{typesetAbstractGroup}{}{}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{natbib}
+
+
+
+
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\setcounter{secnumdepth}{5}
+ 
+\titleformat{\section}[hang]{\NormalBaseline\filright\large\bfseries}
+{\large\thesection}
+{10pt}
+{}
+[]
+\titleformat{\subsection}[hang]{\NormalBaseline\filright\bfseries}
+{\thesubsection}
+{10pt}
+{}
+[]
+\titleformat{\subsubsection}[hang]{\NormalBaseline\filright\bfseries\itshape}
+{\upshape\thesubsubsection}
+{10pt}
+{}
+[]
+\titleformat{\paragraph}[runin]{\NormalBaseline\filright\bfseries}
+{\theparagraph}
+{10pt}
+{}
+[]
+\titleformat{\subparagraph}[runin]{\NormalBaseline\filright\bfseries\itshape}
+{\thesubparagraph}
+{10pt}
+{}
+[]
+
+\titlespacing{\section}{0pt}{1.5\baselineskip}{.2\baselineskip}  
+\titlespacing{\subsection}{0pt}{1.5\baselineskip}{.2\baselineskip}  
+\titlespacing{\subsubsection}{0pt}{1.5\baselineskip}{.2\baselineskip}  
+\titlespacing{\paragraph}{0pt}{.5\baselineskip}{10pt}  
+\titlespacing{\subparagraph}{0pt}{.5\baselineskip}{10pt}  
+  
+
+  
+
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\begin{document}
+
+
+\renewcommand*\rmdefault{bch}\normalfont\upshape
+
+
+
+
+\shorttitle{}
+
+\date{}  
+
+\vspace{1cm}
+\section{Vectors and product of vectors on there:}
+The physical quantitiy that can be characterised by its magnitude and its direction is known as vector quantity. It is represented with a letter (variable) or a combination of two letters with an arrow at its top. For eg: $\overrightarrow{a},\overrightarrow{b}, \overrightarrow{AB},\overrightarrow{i},\overrightarrow{j}$ etc.\\
+Vector product: Vector product is the multiplication of two (or more) vectors. Multiplication between vectors can be performed by the following two ways:
+
+
+1) Scalar product or dot product
+
+
+2) Vector product or cross product
+
+Among them scalar product (dot product) of vectors is discussed below:
+
+
+
+\section{Scalar product of vectors:}
+Dot product is the type of vector multiplication that returns a scalar quantity. The name "dot product" is derived from the centered dot " · ", that is often used to designate this operation; the alternative name "scalar product" emphasizes that the result is a scalar. It can be defined as the product of the magnitudes of the two vectors and the cosine of the angle between them. Algebraically, the dot product is the sum of the products of the corresponding entries of the two sequences of numbers. This definition is equivalent when using Cartesian coordinates. Geometrically, it is the product of the projection of the first vector onto the second vector and the magnitude of the second vector.
+
+ 
+If $\overrightarrow{a}$ and $\overrightarrow{b}$ are two vectors, then their scalar product denoted by $\overrightarrow{a}.\overrightarrow{b}$ is given by,
+
+\begin{center}
+$\overrightarrow{a}.\overrightarrow{b} =\hspace{0.2cm} \vline \overrightarrow{a} \vline \hspace{0.2cm} \vline \overrightarrow{b} \vline \hspace{0.2cm} \cos \theta = ab\cos\theta$
+\end{center}
+
+\mbox{where, a and b are the magnitudes of the vectors  $\overrightarrow{a}$ and $\overrightarrow{b}$ respectively and $\theta$ is the angle between them.}
+
+
+In ordered pair form,
+
+If $\overrightarrow{a}=(a_1,a_2)$ and $\overrightarrow{b}=(b_1,b_2)$ are two plane vectors, then their scalar produt is given by,
+
+
+\begin{center}
+$\overrightarrow{a}.\overrightarrow{b} = a_1b_1+a_2b_2$
+\end{center} 
+
+
+Again, if $\overrightarrow{a}=(a_1,a_2,a_3)$ and $\overrightarrow{b}=(b_1,b_2,b_3)$ are two plane vectors, then their scalar produt is,
+
+
+\begin{center}
+$\overrightarrow{a}.\overrightarrow{b} = a_1b_1+a_2b_2+a_3b_3$
+\end{center} 
+\begin{figure}[b]
+\includegraphics[width=4cm]{Inner-product-angle.svg.png}
+\centering
+\end{figure}
+\newpage
+\subsection{Geometrical interpretation:}  
+Let $\overrightarrow{OA}=\overrightarrow{a}$ and $\overrightarrow{OB}=\overrightarrow{b}$. Let $\theta$ be the angle between the vectors $\overrightarrow{a}$ and $\overrightarrow{b}$. From A and B, draw AL and BM perpendiculars to OB and OA respectively.
+\begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
+    \centering
+    \includegraphics[width=0.25\textwidth]{geo1.png}\\
+    \textit{Fig: Geometrical interpretation of vector}
+\end{wrapfigure}
+Now,
+
+
+
+$\overrightarrow{a}.\overrightarrow{b} =\hspace{0.2cm} \vline \overrightarrow{a} \vline \hspace{0.2cm} \vline \overrightarrow{b} \vline \hspace{0.2cm} \cos \theta$
+
+
+\hspace{0.9cm}
+$=ab\cos\theta$
+
+
+\hspace{0.9cm}
+$=(OA)(OB\cos\theta$
+
+
+\hspace{0.9cm}
+$=OA*OM$
+
+
+\hspace{0.9cm}
+= magenitude of $\overrightarrow{a}*$ projection of $\overrightarrow{b}$ on $\overrightarrow{a}$ \\
+Similarly, $\overrightarrow{a}.\overrightarrow{b}=$ magnitude of $\overrightarrow{b}*$ projection of $\overrightarrow{a}$ on $\overrightarrow{b}$.\\
+Hence the scalar product of two vectors is the product of the\\
+\mbox{magnitude of one of the vectors and the projection of the second}\\ vector on the first.\\
+\subsubsection{Case: Perpendicular vectors}
+Let, $\overrightarrow{a}$ and $\overrightarrow{b}$ be two perpendicular vectors. So, angle between them $(\theta)$ is 90$^{\circ}$.\\
+So, \begin{center} $\overrightarrow{a}.\overrightarrow{b} =\hspace{0.2cm} \vline \overrightarrow{a} \vline \hspace{0.2cm} \vline \overrightarrow{b} \vline \hspace{0.2cm} \cos \theta$
+
+
+\hspace{1.2cm}
+= $\vline \overrightarrow{a} \vline \hspace{0.2cm} \vline \overrightarrow{b} \vline \hspace{0.2cm} \cos 90^{\circ}$
+
+
+\hspace{-1cm}
+= $0$
+\end{center}
+Thus if two vectors are perpendicular, their scalar product is zero.\\\\
+\subsubsection{Case: Co-directional vectors}
+Let, $\overrightarrow{a}$ and $\overrightarrow{b}$ be two co-directional vectors. So, angle between them $(\theta)$ is 0$^{\circ}$.\\
+So, \begin{center} $\overrightarrow{a}.\overrightarrow{b} =\hspace{0.2cm} \vline \overrightarrow{a} \vline \hspace{0.2cm} \vline \overrightarrow{b} \vline \hspace{0.2cm} \cos \theta$
+
+
+\hspace{0.9cm}
+$=$ $\vline \overrightarrow{a} \vline \hspace{0.2cm} \vline \overrightarrow{b} \vline \hspace{0.2cm} \cos 0^{\circ}$
+
+
+\hspace{-0.2cm}
+$=$ $\vline \overrightarrow{a} \vline \hspace{0.2cm} \vline \overrightarrow{b} \vline$
+\end{center}
+Thus if two vectors are perpendicular, their scalar product is equal to the product of their magnitudes.
+\newpage
+\subsubsection{Angle between two vectors}
+Let O be the origin. So, $\overrightarrow{OA}=\overrightarrow{a}=(a_1,a_2)$ and $\overrightarrow{OB}=\overrightarrow{b}=(b_1,b_2). \sphericalangle XOA=\beta, \sphericalangle XOB = \alpha$. So, \mbox{$\sphericalangle AOB=\alpha - \beta=\theta$. \hspace{0.1cm} 
+From A and B, draw AM and BN perpendiculars to OX.}
+\vspace{-0.5cm}
+\begin{wrapfigure}{r}{0.40\textwidth} %this figure will be at the right
+    \centering
+    \includegraphics[width=0.25\textheight]{abt2v.png}\\
+    \textit{Angle between two vectors}
+\end{wrapfigure}
+
+
+$OM=OA\cos\beta$ 
+
+
+\hspace{-0.4cm}$\therefore a_1=a \cos \beta$
+
+
+$MA=OA\sin\beta$
+
+
+\hspace{-0.4cm}$\therefore a_2=a\sin\beta$\\
+Similarly,
+
+
+$b_1=b\cos\alpha$ and $b_2=b\sin\alpha$\\
+Now, 
+$a_1 b_1 + a_2 b_2=a\cos\beta b\cos\alpha + a\sin\beta b\sin\alpha$
+
+
+\hspace{2.4cm}=$ab(\cos\alpha \cos\beta + \sin\alpha \sin\beta)$
+
+
+\hspace{2.4cm}=$ab \cos(\alpha - \beta)$
+
+
+\hspace{2.4cm}=$ab\cos\theta$\\[0.5cm]
+$\therefore$\hspace{0.5cm}$\cos\theta = \dfrac{a_1 b_1 + a_2 b_2}{ab}=\dfrac{\overrightarrow{a}.\overrightarrow{b}}{ab}$
+
+
+In case of space vectors,
+
+
+$\overrightarrow{a}.\overrightarrow{b}=a_1 b_1 + a_2 b_2 +a_3 b_3$ \\and,  $ab=\sqrt{a_1^2 + a_2^2 + a_3^2}.\sqrt{b_1^2 + b_2^2 + b_3^2}$
+
+
+\subsubsection{Length of a vector as scalar product}
+Let, $\overrightarrow{a}=(a_1,a_2)$ be a plane vector. Then,\\
+$\overrightarrow{a}.\overrightarrow{a}=(a_1,a_2).(a_1,a_2)$
+
+
+\hspace{0.4cm}= $a_1 ^2 + a_2 ^2$
+
+
+\hspace{0.4cm}= $a^2$\\
+Since $a_1 ^2 + a_2 ^2 > 0$ for $a_1=a_2\neq0,$
+
+
+$a=\sqrt{a_1 ^2 + a_2 ^2}=\sqrt{\overrightarrow{a}.\overrightarrow{a}}$
+
+
+\vspace{0.4cm}
+Hence the length of a vector $\overrightarrow{a}$ is the positive aquare root of the scalar product $\overrightarrow{a}.\overrightarrow{a}.$ The scalar product of a vector with itself is often written as the square of the vector.
+\newpage
+\subsubsection{Properties of scalar product}
+\begin{multicols}{2}
+\textbf{Scalar projection}
+
+
+The scalar projection of a vector 
+$\overrightarrow{a}$ on $\overrightarrow{b}$ is
+
+
+\vspace{-1cm}
+given by:
+
+
+\vspace{-0.5cm}$a_b=b\cos\theta$\hfill\break Geometrical representation:
+
+
+
+\vspace{.5cm}
+\includegraphics[scale=.1]{Scalar projection.png}
+
+
+
+\vspace{.5cm}
+\textbf{Commutative law}
+
+
+\mbox{The scalar product of vector obeys the}
+
+
+commutative law which is given as:
+
+
+$\overrightarrow{a}.\overrightarrow{b}=\overrightarrow{b}.\overrightarrow{a}$
+
+
+Geometrical representation:
+
+
+\vspace{.5cm}
+\includegraphics[scale=.7]{commutative-law-ConvertImage.png}
+
+
+\vspace{8cm}
+\textbf{Associative law}
+
+
+\vspace{.9cm}
+\mbox{The scalar product of vector obeys the}
+
+
+associative law which is given as:\\
+$\overrightarrow{a}+(\overrightarrow{b}+\overrightarrow{c})=(\overrightarrow{a}+\overrightarrow{b})+\overrightarrow{c}$
+
+
+Geometrical representation:
+
+
+\vspace{.4cm}
+\includegraphics[scale=0.5]{Associative law.png}
+
+
+\vspace{2.5cm}
+\textbf{Distributive law}
+
+
+\mbox{The dot product of two vector obeys the}
+
+
+distributive law which is given by:
+
+
+$\overrightarrow{a}.(\overrightarrow{b}+\overrightarrow{c})$ = $\overrightarrow{a}.\overrightarrow{b}+\overrightarrow{a}.\overrightarrow{c}$
+
+
+Geometrical representation:
+
+
+\vspace{.5cm}
+\includegraphics[scale=.2]{Distributive law.png}
+\end{multicols}
+\newpage
+\section{Observation:}
+The dot product of two vectors gives a scalar result. For two vectors $\overrightarrow{a}$ and $\overrightarrow{b}$, it can be represented as $\overrightarrow{a}.\overrightarrow{b}=|\overrightarrow{a}| |\overrightarrow{b}| \cos \theta$. It is the product of the magnitude of the vectors and the cosine of the angle between them. It can also be represented as the product of magnitude of one of the vectors and the projection of the second vector on the first one. Dot product has it's own special cases like when vectors are perpendicular or co-directional. It also obeys the commutative law, associative law and distributive law of binary operation.
+
+\section{Conclusion:}
+The dot product between two vectors can be interpreted geometrically too. It draws a number of conclusions. The dot product can be calculated as the product of magnitude of a vector and the projection of the other vector on the first one. Whereas, taking the dot product of a vector with itself yields the squared length of the vector. The dot product is zero when vectors are orthogonal and equal to the product of the magnitudes when they are co-directional. The dot product will be maximum when the vectors are parallel. Also, it is positive when vectors form acute angle and negative when they form obtuse. Geometrical interpretation can be used to demonstrate all the special cases and properties of scalar product of vectors.
+\newpage
+\section{Bibliography/Refrences:}
+$
+1) https://en.wikipedia.org/wiki/Dot_product$ 
+
+
+$2) https://mathinsight.org/dot_product$
+
+
+$3) (2077) Basic Mathematics, Sukunda Pustak Bhawan$
+
+
+
+\bibliography{\jobname}
+
+\end{document}

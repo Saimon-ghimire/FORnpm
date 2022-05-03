@@ -1,0 +1,21 @@
+# Fdb version 3
+["pdflatex"] 1620049073 "/home/saimon7259/Documents/Latex/late1.tex" "/home/saimon7259/Documents/Latex/late1.pdf" "late1" 1620049073
+  "/etc/texmf/web2c/texmf.cnf" 1619095016 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/saimon7259/Documents/Latex/late1.aux" 1620049073 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/saimon7259/Documents/Latex/late1.tex" 1620049072 171 621fc6d38565e6cc2bca0caaacba3333 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1580683321 20023 e427dd9e17e239bf926ef3aab67fe35e ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1580683321 8446 9874cccac5fee462272c582807dbbf56 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def" 1580854751 25404 9d60f463a00d154207ec0048dee27cf0 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1619095073 128028 f533b797fba58d231669ea19e894e23e ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1619095084 4925180 190e86ed3d9ad673bebd16ffe6a68e88 ""
+  "late1.aux" 1620049073 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "late1.tex" 1620049072 171 621fc6d38565e6cc2bca0caaacba3333 ""
+  (generated)
+  "late1.aux"
+  "/home/saimon7259/Documents/Latex/late1.log"
+  "late1.pdf"
+  "/home/saimon7259/Documents/Latex/late1.pdf"
+  "late1.log"

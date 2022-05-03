@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Practise</title>
+    <script src="a.js"></script>
+</head>
+
+<body>
+    <!-- <div>
+        <img id="bulb" src="bulboff.gif">
+    </div>
+    <button onclick="document.getElementById('bulb').src='bulbon.gif'">Click me</button>
+    <br><br>
+
+    <input type='text' placeholder="USD" id='us'>
+    <button onclick='convert()'>convert</button>
+    <input type='text' placeholder="NRS" id='np' readonly>
+
+    <script>
+        function convert() {
+            var usd = parseInt(document.getElementById('us').value);
+            var np = usd * 118;
+            document.getElementById('np').value = np;
+        }
+    </script> -->
+    <table border='0'>
+        <tr>
+            <td>First name: </td>
+            <td><input type='text' id='fname' style='border-width:0px;' readonly></td>
+        </tr>
+        <tr>
+            <td>Last name: </td>
+            <td><input type='text' id='lname' style='border-width:0px;' readonly></td>
+        </tr>
+        <tr>
+            <td>Email: </td>
+            <td><input type='text' id='Email' style='border-width:0px;' readonly></td>
+        </tr>
+        <tr>
+            <td>Subject: </td>
+            <td><input type='text' id='Subject' style='border-width:0px;' readonly></td>
+        </tr>
+
+    </table>
+    <script>
+        const teacher = {
+            fName: 'Ram',
+            lName: 'Sharma',
+            Subject: 'Maths',
+            Email: 'xyz@www.com'
+        };
+        document.getElementById('fname').value = teacher.fName;
+        document.getElementById('lname').value = teacher.lName;
+        document.getElementById('Email').value = teacher.Subject;
+        document.getElementById('Subject').value = teacher.Email;
+
+    </script>
+
+
+</body>
+
+</html>
